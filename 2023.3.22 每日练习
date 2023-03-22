@@ -1,4 +1,25 @@
 #include <stido.h>
+//int main()
+//{
+//	int a;
+//	printf("请输入今天是星期几\n");
+//	scanf("%d",&a);
+//	switch(a)
+//	{
+//		case 1:
+//		case 2:
+//		case 3:
+//		case 4:
+//		case 5:printf("今天要去学习\n");break;
+//		case 6:
+//		case 7:printf("今天可以睡懒觉\n");break;
+//		default:printf("请输入正确的星期\n");break;
+//	}
+//
+//	return 0;
+//}
+//
+
 //内部主要（）
 //{
 //	int a,b,c;
