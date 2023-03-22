@@ -1,59 +1,20 @@
 #include <stido.h>
-//int main(
-//{
-//	int a;
-//	printf("请输入今天是星期几\n");
-//	scanf("%d",&a);
-//	switch(a)
-//	{
-//		case 1:
-//		case 2:
-//		case 3:
-//		case 4:
-//		case 5:printf("今天要去学习\n");break;
-//		case 6:
-//		case 7:printf("今天可以睡懒觉\n");break;
-//		default:printf("请输入正确的星期\n");break;
-//	}
-//
-//	return 0;
-//}
-//
+char x[20]={0}; //使用者输入的密码
+char y[20]={"123456"}; //正确的密码
 
-//内部主要（）
-//{
-//	int a,b,c;
-//	printf("请输入两门课的成绩");
-//	scanf("%d%d",&a,&b);
-//	if(a>60&b>60) c=2;
-//	if(a<60&b<60) c=0;
-//	if((a<100)&(b<100))
-//	{
-//		switch(c)
-//		{
-//			case 0:printf("考试不合格\n");break;
-//			case 2:printf("考试成绩为优秀\n");break;
-//			default:printf("考试成绩合格\n");break;
-//		}
-//	}
-//	else 
-//	printf("请输入正确的成绩\n");
-//	
-//	return 0;
-//}
+int main()
+{
+	char c1;
+	char c2;
+	printf("请输入六位数密码\n");
+	scanf("%s",x);
+	while((c2=getchar())!=10);
+	printf("请确认(Y/N)\n");
+	if((c1=getchar())='Y');
+	{
+		if(x[0]==y[0]) printf("密码正确\n");
+		else printf("密码错误\n");
+	}
+	return 0;
 
-
-
-//struct关键词
-//struct book  //创造名词 书
-//{
-//	char name[20];  //书的名字
-//	int price;  //书的价格
-//};
-//int main()
-//{
-//	struct book B1={"海底两万里",40};  //输出书的名字和价格
-//	printf("%s\n",B1.name);  //向用户展示书的名字
-//	printf("   %d元\n",B1.price);  //向用户展示书的价格
-//	return 0;
-//}
+}
