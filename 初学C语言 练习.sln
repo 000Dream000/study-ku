@@ -1,20 +1,13 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "初学C语言 练习", "初学C语言 练习\初学C语言 练习.vcxproj", "{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}.Debug|Win32.ActiveCfg = Debug|Win32
-		{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}.Debug|Win32.Build.0 = Debug|Win32
-		{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}.Release|Win32.ActiveCfg = Release|Win32
-		{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}.Release|Win32.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+#include <stdio.h>
+struct book  //创造名词 书
+{
+	char name[20];  //书的名字
+	int price;  //书的价格
+};
+int main()
+{
+	struct book B1={"海底两万里",40};  //输出书的名字和价格
+	printf("%s\n",B1.name);  //向用户展示书的名字
+	printf("   %d元\n",B1.price);  //向用户展示书的价格
+	return 0;
+}
