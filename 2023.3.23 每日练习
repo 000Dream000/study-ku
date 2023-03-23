@@ -1,4 +1,19 @@
-//#include <stido.h>
+
+#include <stdio.h>
+////输出1~100之间能被7整除的整数.
+//int main()
+//{
+//	int x=1;
+//	int y=0;
+//	printf("1~100中能被7整除的数有:");
+//	for(x=1;x<=100;x++)
+//	{
+//		if(x%7!=0) continue;
+//		else printf("%d ,",x);
+//	}
+//	putchar('\n');
+//	return 0;
+//}//#include <stido.h>
 //int main()
 //{
 //	int i=0;
