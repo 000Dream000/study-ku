@@ -1,4 +1,26 @@
-
+#include <stdio.h>
+//#define BGET(R,bit) ((R>>bit)&1)
+//int main()
+//{
+//	int R=0;
+//	int a=0;
+//	int i=0;
+//	printf("请输入一个一字节整形数\n");
+//	scanf("%d",&R);
+//	if(R<256&&R>-256)
+//	{
+//		printf("它的二进制为:");
+//		for(i=0;i<=7;i++)
+//		{
+//			a=BGET(R,i);
+//			printf("%d  ",a);
+//		}
+//	}
+//	else printf("请输出正确的数");
+//	putchar('\n');
+//	return 0;
+//
+//}
 #include <stdio.h>
 ////输出1~100之间能被7整除的整数.
 //int main()
