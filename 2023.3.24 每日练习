@@ -1,0 +1,22 @@
+//#include <stdio.h>
+//#include <string.h>
+//#include <Windows.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	char crr1[]={"FSH is shuai B!!!!!!"};
+//	char crr2[]={"####################"};
+//	int right=strlen(crr1)-1;
+//	int left=0;
+//	while(right>=left)
+//	{
+//		crr2[right]=crr1[right];
+//		crr2[left]=crr1[left];
+//		right--;
+//		left++;
+//		printf("%s\n",crr2);
+//		Sleep(1000);
+//		system("cls");
+//	}
+//
+//}
