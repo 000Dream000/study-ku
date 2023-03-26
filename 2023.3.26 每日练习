@@ -1,0 +1,36 @@
+//#include <Windows.h>
+//#include <stdlib.h>
+//#include <string.h>
+//char crr1[]={"FSH is da shuai bi!!!!!!!"};
+//char crr2[]={"#########################"};
+//int main()
+//{	
+//	int right=strlen(crr1)-1;
+//		int left=0;
+//	while(right>=left)
+//	{
+//	
+//		crr2[left]=crr1[left];
+//		crr2[right]=crr1[right];
+//		printf("%s\n",crr2);
+//		Sleep(500);
+//		system("cls");
+//		left++; right--;
+//	}
+//	system("space");
+//
+//}
+//struct  book
+//{
+//	char name[20];
+//	int price;
+//};
+//int main()
+//{
+//	struct book b1={"海底两万里",88};
+//	printf("这本书的名字是<<%s>>\n",b1.name);
+//	printf("价格是%d元\n",b1.price);
+//	return 0;
+//
+//}
+
