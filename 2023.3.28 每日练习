@@ -1,0 +1,41 @@
+//#include <stdio.h>
+//#include <string.h>
+//#include <math.h>
+//#define N 10
+//
+//int sum=0;
+//void add(int x)
+//{
+//	if(x>0) add(x-1);
+//	sum=sum+x;
+//}
+//int main()
+//{
+//	add(N);
+//	printf("1~%d之和为%d\n",N,sum);
+//	 
+//	 return 0;
+//
+//	
+//}
+	
+//#include <stdio.h>
+//#include <string.h>
+//#include <math.h>
+//
+//
+//void F(int x)
+//{
+//	if(x>9) F(x/10);
+//	printf("%d  ",x%10);
+//}
+//int main()
+//{
+//	int a;
+//	 scanf("%d",&a);
+//	 F(a);
+//	 return 0;
+//
+//	
+//}
+//	
