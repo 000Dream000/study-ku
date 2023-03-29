@@ -1,5 +1,16 @@
 //#include <stdio.h>
 //#include <string.h>
+//char arr1[]={1,2,3,4};
+//char arr2[]={"123"};
+//int main()
+//{
+//printf("%d\n",sizeof(arr2));
+//printf("%d\n",strlen(arr1));
+//printf("%d\n",sizeof(arr1)/sizeof(arr1[0]));
+//return 0;
+//}
+//#include <stdio.h>
+//#include <string.h>
 //#include <math.h>
 //#define N 10
 //
