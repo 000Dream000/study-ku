@@ -1,20 +1,198 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "初学C语言 练习", "初学C语言 练习\初学C语言 练习.vcxproj", "{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}.Debug|Win32.ActiveCfg = Debug|Win32
-		{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}.Debug|Win32.Build.0 = Debug|Win32
-		{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}.Release|Win32.ActiveCfg = Release|Win32
-		{CF3A097C-81F8-4AD3-BDBE-7D454C1C5B03}.Release|Win32.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+////#include <stdio.h>
+////////////////////整形提升//////////////
+//////int main()
+//////{
+//////	char a=181;  //1011 0101
+//////	             //11111111 11111111 11111111 1011 0101  补码
+//////	             //11111111 11111111 11111111 1011 0100  反码
+//////	             //10000000 00000000 00000000 0100 1011  原码
+//////	             //-75
+//////	printf("%d\n",a);
+//////	return 0;
+//////		
+//////}
+//////
+/////////////////////输入整数 输出整数转化为二进制后数字1的个数////////////
+////
+////
+//////////////////////////方法1(只适用于正整数)////////////////////////////
+//////int main()
+//////{
+//////	int a=0;
+//////  printf("请输入一个正整数>:");
+//////	int sum=0; //计数器
+//////	scanf("%d",&a);
+//////	while(1)
+//////	{
+//////		if(a%2==1) sum++;
+//////		if(a==1) break;
+//////		a=a/2;
+//////	}
+//////	printf("%d\n",sum);
+//////	return 0;
+//////}
+//////////////////////////////////////////////////////////////
+/////////////////////////////方法2////////////////////////////
+//////int main()
+//////
+//////	int i=0;
+//////	int a=0;
+//////	int sum=0;
+//////	printf("请输入一个整数>:");
+//////	scanf("%d",&a);
+//////		for(i=0;i<32;i++)
+//////		{
+//////			if((a&(1<<i))!=0) sum++;  //注意逻辑与 和 按位与的区分
+//////		}
+//////		printf("%d\n",sum);
+//////		return 0;
+//////}
+///////////////////////////////////////////////////////////////
+////////////////////////////方法3//////////////////////////////
+////int main()
+////{
+////	int a=0;
+////	int sum=0;
+////	printf("请输入一个整数>:");
+////	scanf("%d",&a);
+////	while(1)
+////	{
+////		if((a=(a-1) & a)!=0) sum++;
+////		else {sum++;break;}
+////	}
+////	printf("%d\n",sum);
+////	return 0;
+////}
+//
+//////////////指针类型的作用//////////////////////////
+/////////////////1.指针的步速由指针类型决定///////////
+////#include <stdio.h>
+////int main()
+////{
+////	int a=10;
+////	char b=20;
+////	int* Pa=&a;
+////	char* Pb=&b;
+////	printf("%d\n",Pa);
+////	printf("%d\n",Pa+1);
+////
+////	printf("%d\n",Pb);
+////	printf("%d\n",Pb+1);
+////
+////	return 0;
+////}
+//////////////////////////////////////////////////////////////
+////////////////2.指针的访问权利大小由指针类型决定////////////
+////#include <stdio.h>
+////int main()
+////{
+////	int a=1000;
+////	int* Pa=&a;
+////	char* Pb=&a;
+////	printf("%d\n",Pa);
+////
+////	printf("%d\n",Pb);
+////
+////	return 0;
+////}
+////////////////////////////////////////////
+////////////////////////////////////////////
+/////////////////static结构体用指针访问/////////
+////struct Stu
+////{
+////	char name[20];
+////	int age;
+////	char number[20];
+////};
+////#include <stdio.h>
+////int main()
+////{
+////	struct Stu S1={"方孙辉",18,"2203020113"};
+////	struct Stu* P1=&S1;
+////
+////	printf("%s\n",S1.name);
+////	printf("%d\n",S1.age);
+////	printf("%s\n",S1.number);
+////
+////	printf("%s\n",(*P1).name);
+////	printf("%d\n",(*P1).age);
+////	printf("%s\n",(*P1).number);
+////
+////	printf("%s\n",P1->name);
+////	printf("%d\n",P1->age);
+////	printf("%s\n",P1->number);
+////	return 0;
+////}
+////
+////////////////////////////////////////////////
+///////////////////野指针///////////////////////
+///////////////      1.     ///////////////////
+////#include <stdio.h>
+////int main()
+////{
+////	int* P;
+////	*P=10;
+////	return 0;
+////}
+////////////////////////////////////////////////
+//////////////      2.      ///////////////////
+////#include <stdio.h>
+////int main()
+////{
+////	char crr1[10]={0};
+////	char* P=crr1;
+////	int i=0;
+////	for(i=0;i<12;i++)
+////	{
+////		*(P+i)=' ';
+////	}
+////	return 0;
+////}
+/////////////////////////////////////////
+///////////////指针的运算////////////////
+/////////////////////////////////////////
+///////////////1.非指针与指针相加减///////
+////#include <stdio.h>
+////int main()
+////{
+////	char crr1[]={1,2,3,4,5,6,7,8,0};
+////	char* P=crr1;
+////	int i=0;
+////	while(crr1[i]!=0) {printf("%2d",*(P+i));i++;}
+////	return 0;
+////}
+//#include <stdio.h>
+//char crr1[]={1,2,3,4,5,6,7,8,0};
+//char* P1=crr1;
+//	
+//int my_Strlen(char* P2)
+//{
+//	if(*P2!=0) return 1+my_Strlen(P2+1);
+//	else return 0;
+//
+//}
+//int main()
+//{
+//	printf("%d\n",my_Strlen(crr1));
+//	
+//}
+/////////////////////////////////////////////////
+//////////////////2.指针间的相减///////////////
+//#include <stdio.h>
+//char crr1[10]={0};
+//char* P1=&crr1[0];
+//char* P2=&crr1[9];
+//int main()
+//{
+//	printf("%d\n",P2-P1);
+//}
+///////////////////////////////////////////////
+//////////////////3.指针间比大小///////////////
+//#include <stdio.h>
+//char crr1[10]={0};
+//char* P1=&crr1[0];
+//char* P2=&crr1[9];
+//int main()
+//{
+//	if(P2>P1) printf("123123\n");
+//}
