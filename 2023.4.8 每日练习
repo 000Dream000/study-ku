@@ -12,7 +12,7 @@ void game2();
 
 extern char crr1[ROW][COL];
 char* P=&crr1[0][0];
-/////////////////////打印窗口/////////////////////////
+/////////////////////打印窗口////////////////////////
 void window(char crr1[ROW][COL])
 {
 	system("cls");
