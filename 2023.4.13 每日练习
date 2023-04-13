@@ -7,6 +7,7 @@ void D(int crr1[],int sz)
 	int z=0;
 	while(right>left)
 	{
+	
 		z=crr1[left];
 		crr1[left]=crr1[right];
 		crr1[right]=z;
