@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 void D(int crr1[],int sz)
 {
 	int left=0;
