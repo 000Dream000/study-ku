@@ -45,5 +45,4 @@ int main()
 	D(crr1,sz1);
 	print(crr1,sz1);
 	
-
 }
