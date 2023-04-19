@@ -7,7 +7,7 @@ void Delay1ms(int x);
 
 void time1ms();
 void light(int x,int y);
-
+ 
 
 #endif
 #include <INTRINS.H>
