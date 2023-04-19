@@ -1,4 +1,56 @@
+#ifndef __Delay_h__
+#define __Delay_h__
+#include <REGX52.H>
+
+void Delay10us(int x);
+void Delay1ms(int x);
+
+void time1ms();
+void light(int x,int y);
+
+
+#endif
+#include <INTRINS.H>
+
+void Delay1ms(int x)		//@12.000MHz
+{
+	while(x--)
+	{
+		unsigned char i, j;
+
+		i = 2;
+		j = 239;
+		do
+		{
+			while (--j);
+		} while (--i);
+	}
+}
+void Delay10us(int x)
+{
+	while(x--)
+	{
+		unsigned char i;
+
+		_nop_();
+		i = 2;
+		while (--i);
+	}
+}
 #include "Delay.h"
+void time1ms()
+{
+	TMOD&=0XF0;
+	TMOD|=0X01;
+	TF0=0;
+	TR0=1;
+	TH0=64532/256;
+	TL0=64532%256;
+	ET0=1;
+	EA=1;
+	PT0=0;
+}
+
 static int crr1[]={0X3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F,0X77,0X7C};//0=0X3F,1=0X06,2=0X5B,3=0X4F,4=0X66,5=0X6D,6=0X7D,8=0X7F,9=0X6F,A=0X77,B=0X7C,C=0X39,D=0X5E,E=0X79,F=0X71;
 void light(int x,int y)
 {
