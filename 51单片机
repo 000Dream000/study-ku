@@ -65,7 +65,7 @@ void light(int x,int y)
 		case 7:P2_4=0;P2_3=0;P2_2=1;break;
 		case 8:P2_4=0;P2_3=0;P2_2=0;break;
 		defluat: break;
-		
+		 
 	}
 	P0=crr1[y];
 	Delay10us(10);
