@@ -1,0 +1,21 @@
+#include "Delay.h"
+static int crr1[]={0X3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F,0X77,0X7C};//0=0X3F,1=0X06,2=0X5B,3=0X4F,4=0X66,5=0X6D,6=0X7D,8=0X7F,9=0X6F,A=0X77,B=0X7C,C=0X39,D=0X5E,E=0X79,F=0X71;
+void light(int x,int y)
+{
+	switch(x)
+	{
+		case 1:P2_4=1;P2_3=1;P2_2=1;break;
+		case 2:P2_4=1;P2_3=1;P2_2=0;break;
+		case 3:P2_4=1;P2_3=0;P2_2=1;break;
+		case 4:P2_4=1;P2_3=0;P2_2=0;break;
+		case 5:P2_4=0;P2_3=1;P2_2=1;break;
+		case 6:P2_4=0;P2_3=1;P2_2=0;break;
+		case 7:P2_4=0;P2_3=0;P2_2=1;break;
+		case 8:P2_4=0;P2_3=0;P2_2=0;break;
+		defluat: break;
+		
+	}
+	P0=crr1[y];
+	Delay10us(10);
+	P0=0X00;
+}
